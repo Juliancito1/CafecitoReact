@@ -12,3 +12,8 @@
   height: 500px;
   object-fit: cover;
 }
+
+.img-error{
+  height: 900px;
+  object-fit: cover;
+}
