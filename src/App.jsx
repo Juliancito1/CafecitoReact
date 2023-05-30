@@ -1,14 +1,16 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/common/Footer';
-import { Container } from 'react-bootstrap';
 import Menu from './components/common/Menu';
+import Inicio from './components/Inicio';
 function App() {
 
   return (
     <>
       <Menu></Menu>
-      <Container className='mainPage'></Container>
+      <section className='mainPage'>
+        <Inicio></Inicio>
+      </section>
       <Footer></Footer>
     </>
   )
