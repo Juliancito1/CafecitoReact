@@ -23,6 +23,7 @@ function App() {
         <Route exact path="/login" element={<Login></Login>}></Route>
         <Route exact path="/administrador" element={<Administrador></Administrador>}></Route>
         <Route exact path="/administrador/crear" element={<CrearProducto></CrearProducto>}></Route>
+        <Route exact path="/administrador/editar" element={<EditarProducto></EditarProducto>}></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
       </Routes>
       <Footer></Footer>

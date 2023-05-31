@@ -26,6 +26,10 @@ const EditarProducto = () => {
             <option value="cafe">Cafe</option>
             </Form.Select>
             </Form.Group>
+            <Form.Group className="mb-3" controlId="formDescripcion">
+            <Form.Label>Descripcion</Form.Label>
+            <Form.Control as="textarea" rows={3}></Form.Control>
+            </Form.Group>
             <Button variant="primary">Guardar</Button>
             </Form>
         </Container>
