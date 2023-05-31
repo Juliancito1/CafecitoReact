@@ -2,7 +2,7 @@ import { Container , Card , Row , Col } from "react-bootstrap";
 
 const DetalleProducto = () => {
     return (
-        <Container>
+        <Container className="mainPage mt-5">
             <Card>
                 <Row>
                 <Col lg={6}>

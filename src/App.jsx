@@ -8,21 +8,23 @@ import Administrador from './components/views/Administrador';
 import CrearProducto from './components/views/producto/CrearProducto';
 import EditarProducto from './components/views/producto/EditarProducto';
 import DetalleProducto from './components/views/producto/detalleProducto';
+import { BrowserRouter, Routes , Route } from 'react-router-dom';
+
 function App() {
 
   return (
-    <>
-      <Menu></Menu>
-      <section className='mainPage'>
-         <Inicio></Inicio>
-        {/* <Error404></Error404> */}
-        {/* <Administrador></Administrador> */}
-        {/* <CrearProducto></CrearProducto> */}
-        {/* <EditarProducto></EditarProducto> */}
-        {/* <DetalleProducto></DetalleProducto> */}
-      </section>
+    <BrowserRouter>
+    <Menu></Menu>
+      <Routes>
+        <Route exact path="/" element={<Inicio></Inicio>}></Route>
+        {/* <Route exact path="/registro" element={<Registro></Registro>}></Route>
+        <Route exact path="/registro" element={<Registro></Registro>}></Route> */}
+        <Route exact path="/administrador" element={<Administrador></Administrador>}></Route>
+        <Route exact path="/administrador/crear" element={<CrearProducto></CrearProducto>}></Route>
+        <Route path="*" element={<Error404></Error404>}></Route>
+      </Routes>
       <Footer></Footer>
-    </>
+    </BrowserRouter>
   )
 }
 

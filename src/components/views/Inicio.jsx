@@ -3,7 +3,7 @@ import CardProducto from "./CardProducto";
 
 const Inicio = () => {
     return (
-        <section>
+        <section className="mainPage">
         <div>
         <img
           className="d-block w-100 img-Banner"
