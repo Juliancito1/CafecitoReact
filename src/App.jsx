@@ -13,13 +13,13 @@ function App() {
   return (
     <>
       <Menu></Menu>
-      <section className='mainPage my-5'>
-        {/* <Inicio></Inicio> */}
+      <section className='mainPage'>
+         <Inicio></Inicio>
         {/* <Error404></Error404> */}
         {/* <Administrador></Administrador> */}
         {/* <CrearProducto></CrearProducto> */}
         {/* <EditarProducto></EditarProducto> */}
-        <DetalleProducto></DetalleProducto>
+        {/* <DetalleProducto></DetalleProducto> */}
       </section>
       <Footer></Footer>
     </>
