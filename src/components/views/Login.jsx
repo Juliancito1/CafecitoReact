@@ -12,7 +12,16 @@ const Login = () => {
 
   const onSubmit = (usuario) => {
     //console.log(usuario);
-    login(usuario);
+    login(usuario).then((respuesta) => {
+        if(respuesta)
+        {
+            //debo loguear al usuario
+            sessionStorage.setItem('usuario',JSON.stringify(respuesta));
+        }
+        else{
+            //indicar datos erroneos al usuario
+        }
+    });
   };
 
   return (
@@ -28,6 +37,10 @@ const Login = () => {
                 placeholder="Ingrese un email"
                 {...register("email", {
                   required: "El email es obligatorio",
+                  pattern:{
+                    value: /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
+                    message: 'El email debe contener @ y terminar . com/es/com.ar u otra terminacion'
+                  }
                 })}
               />
               <Form.Text className="text-danger">
@@ -40,7 +53,11 @@ const Login = () => {
                 type="password"
                 placeholder="Password"
                 {...register("password", {
-                  required: "El password es obligatorio"
+                  required: "El password es obligatorio",
+                  pattern:{
+                    value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,
+                    message: 'El password debe contener 8 caracteres (al menos 1 letra mayúscula, 1 letra minúscula y 1 numero) también puede incluir carácteres especiales'
+                  }
                 })}
               />
               <Form.Text className="text-danger">

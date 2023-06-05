@@ -7,6 +7,7 @@ const ItemProducto = () => {
           <td>1</td>
           <td>Docena de Medialunas</td>
           <td>$1.050,00</td>
+          <td>Perfectas para acompañar con un rico mate</td>
           <td>URL</td>
           <td>Dulce</td>
           <td><Button variant='warning'>Editar</Button>

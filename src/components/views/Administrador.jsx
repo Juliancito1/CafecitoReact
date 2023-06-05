@@ -9,6 +9,7 @@ const Administrador = () => {
           <th>Cod</th>
           <th>Producto</th>
           <th>Precio</th>
+          <th>Descripcion</th>
           <th>URL de Imagen</th>
           <th>Categoria</th>
           <th>Opciones</th>
