@@ -1,22 +1,28 @@
-import { Form , Button , Container } from "react-bootstrap";
+import { Form, Button, Container, Card } from "react-bootstrap";
+
 const Login = () => {
-    return (
-        <Container className="mainPage mt-5">
-            <h2 className="display-4 text-center">Iniciar Sesión</h2>
-            <hr/>
-            <Form>
-            <Form.Group className="mb-3" controlId="formProducto">
-            <Form.Label>Nombre de Usuario</Form.Label>
-            <Form.Control type="text" placeholder="Juan Perez" />
+  return (
+    <Container className="mainPage">
+      <Card className="my-5">
+        <Card.Header as="h5">Login</Card.Header>
+        <Card.Body>
+          <Form>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email" placeholder="Ingrese un email" />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formPrecio">
-            <Form.Label>Contraseña</Form.Label>
-            <Form.Control type="text" placeholder="Ingrese la contraseña" />
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" placeholder="Password" />
             </Form.Group>
-            <Button variant="primary">Ingresar</Button>
-            </Form>
-        </Container>
-    );
+            <Button variant="primary" type="submit">
+              Ingresar
+            </Button>
+          </Form>
+        </Card.Body>
+      </Card>
+    </Container>
+  );
 };
 
 export default Login;
