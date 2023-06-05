@@ -7,7 +7,6 @@ import Error404 from './components/views/Error404';
 import Administrador from './components/views/Administrador';
 import CrearProducto from './components/views/producto/CrearProducto';
 import EditarProducto from './components/views/producto/EditarProducto';
-import DetalleProducto from './components/views/producto/detalleProducto';
 import { BrowserRouter, Routes , Route } from 'react-router-dom';
 import Login from './components/views/Login';
 import Registro from './components/views/Registro';
