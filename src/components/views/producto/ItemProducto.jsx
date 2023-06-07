@@ -1,19 +1,21 @@
 import React from 'react';
 import { Button, Table } from 'react-bootstrap';
-const ItemProducto = () => {
+import { Link } from 'react-router-dom';
+const ItemProducto = ({producto}) => {
+  const borrarProducto = () => {
+    
+  }
+
     return (
-      <tbody>
         <tr>
-          <td>1</td>
-          <td>Docena de Medialunas</td>
-          <td>$1.050,00</td>
-          <td>Perfectas para acompañar con un rico mate</td>
-          <td>URL</td>
-          <td>Dulce</td>
-          <td><Button variant='warning'>Editar</Button>
-          <Button className='ms-md-2' variant='danger'>Borrar</Button></td>
+          <td>{producto.id}</td>
+          <td>{producto.nombreProducto}</td>
+          <td>{producto.precio}</td>
+          <td>{producto.imagen}</td>
+          <td>{producto.categoria}</td>
+          <td><Link className='btn btn-warning' to={'/administrador/editar'}>Editar</Link>
+          <Button className='ms-md-2' variant='danger' onClick={borrarProducto}>Borrar</Button></td>
         </tr>
-      </tbody>
     );
 };
 

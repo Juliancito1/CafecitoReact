@@ -1,4 +1,11 @@
 const URL_USUARIO = import.meta.env.VITE_API_USUARIO;
+const URL_PRODUCTO = import.meta.env.VITE_API_PRODUCTO
+/*
+    Peticion GET obtener un listado de elementos o un elemento
+    Peticion POST crear un elemento
+    Peticion PUT editar un elemento
+    Peticion DELETE borrar un elemento
+*/
 
 export const login = async (usuario) => {
     console.log(usuario)
@@ -25,6 +32,18 @@ export const login = async (usuario) => {
             console.log('Email incorrecto')
             return null
         }
+    }catch(error)
+    {
+        console.log(error)
+    }
+}
+
+export const obtenerProductos = async () => {
+    try{
+        const respuesta = await fetch(URL_PRODUCTO);
+        const listaProductos = await respuesta.json();
+        return listaProductos;
+
     }catch(error)
     {
         console.log(error)

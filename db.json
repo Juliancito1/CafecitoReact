@@ -1,8 +1,9 @@
 {
     "productos": [
-      { "id": 1, "nombreProducto": "cafe", "precio": 200, "categoria" : "bebida caliente", "deescripcion": "alguna descripcion", "imagen": "linkImagen" },
-      { "id": 2, "nombreProducto": "te", "precio": 100, "categoria" : "bebida caliente", "deescripcion": "alguna descripcion", "imagen": "linkImagen" },
-      { "id": 1, "nombreProducto": "medialuna", "precio": 150, "categoria" : "dulce", "deescripcion": "alguna descripcion", "imagen": "linkImagen" }
+      { "id": 1, "nombreProducto": "cafe", "precio": 200, "categoria" : "bebida caliente", "descripcion": "alguna descripcion", "imagen": "linkImagen" },
+      { "id": 2, "nombreProducto": "te", "precio": 100, "categoria" : "bebida caliente", "descripcion": "alguna descripcion", "imagen": "linkImagen" },
+      { "id": 3, "nombreProducto": "medialuna", "precio": 150, "categoria" : "dulce", "descripcion": "alguna descripcion", "imagen": "linkImagen" },
+      { "id": 4, "nombreProducto": "medialuna 222", "precio": 150, "categoria" : "dulce", "descripcion": "alguna descripcion", "imagen": "linkImagen" }
     ],
     "usuarios": [
       { "id": 1, "nombreUsuario": "admin", "email": "admin@rollingcode.com", "password": "Testing193!" }
