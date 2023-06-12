@@ -16,6 +16,10 @@ const EditarProducto = () => {
   useEffect(() => {
     obtenerProducto(id).then((respuesta) => {
         setValue("nombreProducto", respuesta.nombreProducto);
+        setValue("precio", respuesta.precio);
+        setValue("categoria", respuesta.categoria);
+        setValue("imagen", respuesta.imagen);
+        setValue("descripcion", respuesta.descripcion);
         //todo: agregar el resto de los setValue
     });
   }, []);

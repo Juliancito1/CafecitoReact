@@ -4,7 +4,7 @@
       "id": 1,
       "nombreProducto": "cafe",
       "precio": 200,
-      "categoria": "bebida caliente",
+      "categoria": "Bebida Caliente",
       "descripcion": "alguna descripcion",
       "imagen": "linkImagen"
     },
