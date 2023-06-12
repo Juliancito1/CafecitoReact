@@ -47,7 +47,7 @@ const ItemProducto = ({producto,setProductos}) => {
           <td>{producto.precio}</td>
           <td className='text-truncate'>{producto.imagen}</td>
           <td>{producto.categoria}</td>
-          <td><Link className='btn btn-warning mb-2 mb-md-0' to={'/administrador/editar'}>Editar</Link>
+          <td><Link className='btn btn-warning mb-2 mb-md-0' to={`/administrador/editar/${producto.id}`}>Editar</Link>
           <Button className='ms-md-2' variant='danger' onClick={borrarProducto}>Borrar</Button></td>
         </tr>
     );
