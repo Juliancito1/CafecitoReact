@@ -1,7 +1,8 @@
-import { Table , Button } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import ItemProducto from "./producto/ItemProducto";
 import { useEffect, useState } from "react";
 import { obtenerProductos } from "../helpers/queries";
+import { Link } from "react-router-dom";
 const Administrador = () => {
    
     const [productos,setProductos] = useState([])
@@ -18,9 +19,9 @@ const Administrador = () => {
         <section className="container mainPage mt-5">
             <div className="d-flex justify-content-between align-items-center mt-5">
           <h1 className="display-4">Productos disponibles</h1>
-          <Button className="btn btn-primary" to='/administrar/crear'>
+          <Link className="btn btn-primary" to='/administrador/crear'>
             Agregar
-          </Button>
+          </Link>
         </div>
         <hr></hr>
         <section className="table-responsive">

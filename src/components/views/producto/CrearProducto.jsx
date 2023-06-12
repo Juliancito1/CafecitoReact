@@ -1,13 +1,30 @@
 import { Button, Container , Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-
+import { consultaCrearProducto } from "../../helpers/queries";
+import Swal from "sweetalert2";
 const CrearProducto = () => {
 
     const {register,handleSubmit,formState: { errors },reset} = useForm()
 
-    const onSubmit = () => {
-        console.log('mi submit');
-        reset()
+    const onSubmit = (producto) => {
+        console.log(producto);
+        //realizar la peticion que agrega el producto a la API
+        consultaCrearProducto(producto).then((respuesta) => {
+          if(respuesta.status===201)
+          {
+            Swal.fire(
+              'Producto Creado',
+              `El producto ${producto.nombreProducto} fue creado`,
+              'success');
+              reset()
+          }
+          else{
+            Swal.fire(
+              'Se produjo un error',
+              `Intente realizar esta operacion mas tarde`,
+              'error');
+          }
+        })
     }
 
     return (
@@ -18,23 +35,23 @@ const CrearProducto = () => {
             <Form.Group className="mb-3" controlId="formProducto">
             <Form.Label>Producto*</Form.Label>
             <Form.Control type="text" placeholder="Ej: Cafe" 
-            {...register("producto",{
+            {...register("nombreProducto",{
                 required: 'El nombre del producto es obligatorio y debe comenzar con mayúscula',
                 minLength:{
-                  value: 5,
-                  message: 'El nombre del Producto debe contener como mínimo 5 carácteres'
+                  value: 2,
+                  message: 'El nombre del Producto debe contener como mínimo 2 carácteres'
                 },
                 maxLength:{
                   value: 45,
                   message: 'El nombre del Producto debe contener como máximo 45 carácteres'
                 },
                 pattern:{
-                  value: /^[A-Z][A-Za-z]{4,44}$/,
+                  value: /^[A-Z][A-Za-z]{1,44}$/,
                   message: 'El nombre del producto solo puede contener letras y debe comenzar con mayúscula'
                 }
               })}/>
               <Form.Text className="text-danger">
-                {errors.producto?.message}
+                {errors.nombreProducto?.message}
               </Form.Text>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formPrecio">
@@ -83,7 +100,8 @@ const CrearProducto = () => {
             <option value=''>Seleccione una Categoria</option>
             <option value="Dulce">Dulce</option>
             <option value="Salado">Salado</option>
-            <option value="Cafe">Cafe</option>
+            <option value="Bebida Caliente">Bebida Caliente</option>
+            <option value="Bebida Fria">Bebida Fria</option>
             </Form.Select>
             <Form.Text className="text-danger">
                 {errors.categoria?.message}

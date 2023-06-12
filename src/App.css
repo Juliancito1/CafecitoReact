@@ -17,3 +17,7 @@
   height: 900px;
   object-fit: cover;
 }
+
+table{
+  table-layout: fixed;
+}

@@ -82,7 +82,8 @@ const EditarProducto = () => {
             <option value=''>Seleccione una Categoria</option>
             <option value="Dulce">Dulce</option>
             <option value="Salado">Salado</option>
-            <option value="Cafe">Cafe</option>
+            <option value="Bebida Caliente">Bebida Caliente</option>
+            <option value="Bebida Fria">Bebida Fria</option>
             </Form.Select>
             <Form.Text className="text-danger">
                 {errors.categoria?.message}

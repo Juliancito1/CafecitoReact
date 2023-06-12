@@ -7,6 +7,22 @@
       "categoria": "bebida caliente",
       "descripcion": "alguna descripcion",
       "imagen": "linkImagen"
+    },
+    {
+      "nombreProducto": "Medialunas",
+      "precio": "150",
+      "imagen": "https://pics.filmaffinity.com/spider_man_no_way_home-642739124-large.jpg",
+      "categoria": "Dulce",
+      "descripcion": "Las Mejores Medialunas",
+      "id": 3
+    },
+    {
+      "nombreProducto": "Te",
+      "precio": "150",
+      "imagen": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/template-wanted-poster-one-piece-design-df61c3ea1695c0e93ffda67dd8d53fdb_screen.jpg",
+      "categoria": "Bebida Caliente",
+      "descripcion": "El mejor te",
+      "id": 4
     }
   ],
   "usuarios": [
