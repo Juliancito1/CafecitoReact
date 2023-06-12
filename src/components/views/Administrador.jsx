@@ -10,6 +10,7 @@ const Administrador = () => {
         obtenerProductos().then((respuesta)=>{
             console.log(respuesta)
             setProductos(respuesta)
+            //todo: resolver la situacion cuando no puedo realizar la conexion a la API
         })
     },[])
 

@@ -49,3 +49,15 @@ export const obtenerProductos = async () => {
         console.log(error)
     }
 }
+
+export const eliminarProducto = async (id) => {
+    try {
+        const respuesta = await fetch(`${URL_PRODUCTO}/${id}`,{
+            method: "DELETE"
+        });
+        return respuesta
+    } catch (error) {
+        console.log(error)
+    }
+
+}
