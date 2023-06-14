@@ -1,0 +1,23 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainPage{
+    flex-grow: 1;
+}
+
+.img-Banner{
+  height: 500px;
+  object-fit: cover;
+}
+
+.img-error{
+  height: 900px;
+  object-fit: cover;
+}
+
+table{
+  table-layout: fixed;
+}

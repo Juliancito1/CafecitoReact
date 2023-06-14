@@ -1,0 +1,36 @@
+{
+  "productos": [
+    {
+      "nombreProducto": "Cafe",
+      "precio": "250",
+      "imagen": "https://pics.filmaffinity.com/the_super_mario_bros_movie-521125124-large.jpg",
+      "categoria": "Bebida Caliente",
+      "descripcion": "El mejor Cafe",
+      "id": 1
+    },
+    {
+      "categoria": "Dulce",
+      "descripcion": "La mejor medialuna",
+      "id": 3,
+      "imagen": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/template-wanted-poster-one-piece-design-df61c3ea1695c0e93ffda67dd8d53fdb_screen.jpg",
+      "nombreProducto": "Medialuna",
+      "precio": "300"
+    },
+    {
+      "nombreProducto": "Te",
+      "precio": "150",
+      "imagen": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/template-wanted-poster-one-piece-design-df61c3ea1695c0e93ffda67dd8d53fdb_screen.jpg",
+      "categoria": "Bebida Caliente",
+      "descripcion": "El mejor te",
+      "id": 4
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombreUsuario": "admin",
+      "email": "admin@rollingcode.com",
+      "password": "Testing193!"
+    }
+  ]
+}
