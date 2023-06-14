@@ -3,14 +3,24 @@ import ItemProducto from "./producto/ItemProducto";
 import { useEffect, useState } from "react";
 import { obtenerProductos } from "../helpers/queries";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 const Administrador = () => {
    
     const [productos,setProductos] = useState([])
 
     useEffect(() => {
         obtenerProductos().then((respuesta)=>{
+          if(respuesta)
+          {
             console.log(respuesta)
             setProductos(respuesta)
+          }
+          else{
+            Swal.fire(
+              'Se produjo un error al intentar cargar los datos',
+              `Intente realizar esta operacion mas tarde`,
+              'error');
+          }
             //todo: resolver la situacion cuando no puedo realizar la conexion a la API
         })
     },[])

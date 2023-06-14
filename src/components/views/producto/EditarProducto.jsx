@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { obtenerProducto } from "../../helpers/queries";
 import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 const EditarProducto = () => {
   const { id } = useParams();
   const {
@@ -15,11 +16,21 @@ const EditarProducto = () => {
 
   useEffect(() => {
     obtenerProducto(id).then((respuesta) => {
+      if(respuesta)
+      {
+
         setValue("nombreProducto", respuesta.nombreProducto);
         setValue("precio", respuesta.precio);
         setValue("categoria", respuesta.categoria);
         setValue("imagen", respuesta.imagen);
         setValue("descripcion", respuesta.descripcion);
+      }
+      else{
+        Swal.fire(
+          'Se produjo un error al intentar cargar los datos',
+          `Intente realizar esta operacion mas tarde`,
+          'error');
+      }
         //todo: agregar el resto de los setValue
     });
   }, []);
