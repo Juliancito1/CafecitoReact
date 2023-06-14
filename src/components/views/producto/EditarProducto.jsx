@@ -1,16 +1,17 @@
 import { Container, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
-import { obtenerProducto } from "../../helpers/queries";
-import { useParams } from "react-router-dom";
+import { consultaEditarProducto, obtenerProducto } from "../../helpers/queries";
+import { useParams, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 const EditarProducto = () => {
   const { id } = useParams();
+  const navegacion = useNavigate();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
     setValue,
   } = useForm();
 
@@ -18,7 +19,6 @@ const EditarProducto = () => {
     obtenerProducto(id).then((respuesta) => {
       if(respuesta)
       {
-
         setValue("nombreProducto", respuesta.nombreProducto);
         setValue("precio", respuesta.precio);
         setValue("categoria", respuesta.categoria);
@@ -34,9 +34,24 @@ const EditarProducto = () => {
         //todo: agregar el resto de los setValue
     });
   }, []);
-  const onSubmit = () => {
+  const onSubmit = (productoEditado) => {
     console.log("mi submit");
-    reset();
+    consultaEditarProducto(productoEditado,id).then((respuesta) => {
+      if(respuesta && respuesta.status === 200)
+      {
+        Swal.fire(
+          'Producto actualizado',
+          `El producto : ${productoEditado.nombreProducto} fue actualizado correctamente`,
+          'success'
+        )
+        navegacion('/administrador')
+      }else{
+        Swal.fire(
+          'Se produjo un error al intentar actualizar los datos',
+          `El producto: ${productoEditado.nombreProducto} no fue actualizado, intente esta operacion mas tarde`,
+          'error');
+      }
+    })
   };
 
   return (
@@ -53,7 +68,7 @@ const EditarProducto = () => {
               required:
                 "El nombre del producto es obligatorio y debe comenzar con mayúscula",
               minLength: {
-                value: 5,
+                value: 2,
                 message:
                   "El nombre del Producto debe contener como mínimo 5 carácteres",
               },
@@ -63,7 +78,7 @@ const EditarProducto = () => {
                   "El nombre del Producto debe contener como máximo 45 carácteres",
               },
               pattern: {
-                value: /^[A-Z][A-Za-z]{4,44}$/,
+                value: /^[A-Z][A-Za-z]{1,44}$/,
                 message:
                   "El nombre del producto solo puede contener letras y debe comenzar con mayúscula",
               },

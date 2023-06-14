@@ -3,7 +3,7 @@ const URL_PRODUCTO = import.meta.env.VITE_API_PRODUCTO
 /*
     Peticion GET obtener un listado de elementos o un elemento
     Peticion POST crear un elemento
-    Peticion PUT editar un elemento
+    Peticion PUT / PATCH editar un elemento
     Peticion DELETE borrar un elemento
 */
 
@@ -76,6 +76,21 @@ export const consultaCrearProducto = async (producto) => {
     try {
         const respuesta = await fetch(URL_PRODUCTO,{
             method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(producto)
+        });
+        return respuesta
+    } catch (error) {
+        console.log(error)
+    }
+
+}
+export const consultaEditarProducto = async (producto,id) => {
+    try {
+        const respuesta = await fetch(URL_PRODUCTO+'/'+id,{
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },

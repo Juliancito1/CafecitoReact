@@ -1,20 +1,20 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombreProducto": "cafe",
-      "precio": 200,
+      "nombreProducto": "Cafe",
+      "precio": "250",
+      "imagen": "https://pics.filmaffinity.com/the_super_mario_bros_movie-521125124-large.jpg",
       "categoria": "Bebida Caliente",
-      "descripcion": "alguna descripcion",
-      "imagen": "linkImagen"
+      "descripcion": "El mejor Cafe",
+      "id": 1
     },
     {
-      "nombreProducto": "Medialunas",
-      "precio": "150",
-      "imagen": "https://pics.filmaffinity.com/spider_man_no_way_home-642739124-large.jpg",
       "categoria": "Dulce",
-      "descripcion": "Las Mejores Medialunas",
-      "id": 3
+      "descripcion": "La mejor medialuna",
+      "id": 3,
+      "imagen": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/template-wanted-poster-one-piece-design-df61c3ea1695c0e93ffda67dd8d53fdb_screen.jpg",
+      "nombreProducto": "Medialuna",
+      "precio": "300"
     },
     {
       "nombreProducto": "Te",

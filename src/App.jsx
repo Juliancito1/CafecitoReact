@@ -4,8 +4,6 @@ import Footer from './components/common/Footer';
 import Menu from './components/common/Menu';
 import Inicio from './components/views/Inicio';
 import Error404 from './components/views/Error404';
-import Administrador from './components/views/Administrador';
-import CrearProducto from './components/views/producto/CrearProducto';
 import EditarProducto from './components/views/producto/EditarProducto';
 import { BrowserRouter, Routes , Route } from 'react-router-dom';
 import Login from './components/views/Login';
@@ -13,6 +11,7 @@ import Registro from './components/views/Registro';
 import { useState } from 'react';
 import RutasProtegidas from './components/routes/RutasProtegidas';
 import RutasAdministrador from './components/routes/RutasAdministrador';
+import DetalleProducto from './components/views/producto/DetalleProducto';
 
 function App() {
   const usuariodelSesionStorage = JSON.parse(sessionStorage.getItem('usuario')) || {};
@@ -24,6 +23,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
          <Route exact path="/registro" element={<Registro></Registro>}></Route>
+         <Route exact path="/detalle" element={<DetalleProducto></DetalleProducto>}></Route>
         <Route exact path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}></Route>
         <Route exact path="/administrador/*" element={
         <RutasProtegidas>
