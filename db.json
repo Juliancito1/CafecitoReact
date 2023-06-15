@@ -3,7 +3,7 @@
     {
       "nombreProducto": "Cafe",
       "precio": "250",
-      "imagen": "https://pics.filmaffinity.com/the_super_mario_bros_movie-521125124-large.jpg",
+      "imagen": "https://s1.eestatic.com/2017/02/13/cocinillas/cocinillas_193495389_116293001_1706x960.jpg",
       "categoria": "Bebida Caliente",
       "descripcion": "El mejor Cafe",
       "id": 1
@@ -12,14 +12,14 @@
       "categoria": "Dulce",
       "descripcion": "La mejor medialuna",
       "id": 3,
-      "imagen": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/template-wanted-poster-one-piece-design-df61c3ea1695c0e93ffda67dd8d53fdb_screen.jpg",
+      "imagen": "https://cuk-it.com/wp-content/uploads/2021/06/thumb02-e1624221067478.jpg",
       "nombreProducto": "Medialuna",
       "precio": "300"
     },
     {
       "nombreProducto": "Te",
       "precio": "150",
-      "imagen": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/template-wanted-poster-one-piece-design-df61c3ea1695c0e93ffda67dd8d53fdb_screen.jpg",
+      "imagen": "https://i.blogs.es/4fc17c/green-tea-5275926_1280/650_1200.jpg",
       "categoria": "Bebida Caliente",
       "descripcion": "El mejor te",
       "id": 4
