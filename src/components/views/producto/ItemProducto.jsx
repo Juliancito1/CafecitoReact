@@ -16,7 +16,7 @@ const ItemProducto = ({producto,setProductos}) => {
     }).then((result) => {
       if (result.isConfirmed) {
         //aqui tengo que hacer la peticion delete
-        eliminarProducto(producto.id).then((respuesta) => {
+        eliminarProducto(producto._id).then((respuesta) => {
           if(respuesta.status === 200)
           {
             Swal.fire(
@@ -42,12 +42,12 @@ const ItemProducto = ({producto,setProductos}) => {
 
     return (
         <tr>
-          <td>{producto.id}</td>
+          <td>{producto._id}</td>
           <td>{producto.nombreProducto}</td>
           <td>{producto.precio}</td>
           <td className='text-truncate'>{producto.imagen}</td>
           <td>{producto.categoria}</td>
-          <td><Link className='btn btn-warning mb-2 mb-md-0' to={`/administrador/editar/${producto.id}`}>Editar</Link>
+          <td><Link className='btn btn-warning mb-2 mb-md-0' to={`/administrador/editar/${producto._id}`}>Editar</Link>
           <Button className='ms-md-2' variant='danger' onClick={borrarProducto}>Borrar</Button></td>
         </tr>
     );
