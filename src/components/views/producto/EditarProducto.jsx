@@ -73,12 +73,12 @@ const EditarProducto = () => {
                   "El nombre del Producto debe contener como mínimo 5 carácteres",
               },
               maxLength: {
-                value: 45,
+                value: 100,
                 message:
-                  "El nombre del Producto debe contener como máximo 45 carácteres",
+                  "El nombre del Producto debe contener como máximo 100 carácteres",
               },
               pattern: {
-                value: /^[A-Z][A-Za-z]{1,44}$/,
+                value: /^[A-Z][A-Za-z\s0-9]{1,99}$/,
                 message:
                   "El nombre del producto solo puede contener letras y debe comenzar con mayúscula",
               },
@@ -131,7 +131,7 @@ const EditarProducto = () => {
                   "El precio del Producto debe contener como mínimo 2 digitos (mínimo 50)",
               },
               pattern: {
-                value: /^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|png|svg)$/,
+                value: /^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|png|svg)$/,
                 message: "La URL de la Imagen debe terminar con .jpg/.png/.svg",
               },
             })}
