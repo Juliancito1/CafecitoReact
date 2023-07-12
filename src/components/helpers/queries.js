@@ -23,7 +23,8 @@ export const login = async (usuario) =>{
         status: respuesta.status,
         mensaje: datos.mensaje,
         usuario: datos.nombre,
-        uid: datos.uid
+        uid: datos.uid,
+        token: datos.token
       };
     } catch (error) {
       console.log("errores en el login");
@@ -102,7 +103,8 @@ export const consultaCrearProducto = async (producto) => {
         const respuesta = await fetch(URL_PRODUCTO,{
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "x-token": JSON.parse(sessionStorage.getItem('usuario')).token
             },
             body: JSON.stringify(producto)
         });
