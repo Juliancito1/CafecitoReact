@@ -2,7 +2,7 @@ import { Container, Row } from "react-bootstrap";
 import CardProducto from "./CardProducto";
 import { useEffect, useState } from "react";
 import { obtenerProductos } from "../helpers/queries";
-
+import banner from '../../assets/Cafeteria-banner.png'
 const Inicio = () => {
 
     const [productos,setProductos] = useState([])
@@ -29,7 +29,7 @@ const Inicio = () => {
         <div>
         <img
           className="d-block w-100 img-Banner"
-          src="src/assets/Cafeteria-banner.png"
+          src={banner}
           alt="Imagen cafeteria"
         />
         </div>
